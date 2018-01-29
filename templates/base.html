@@ -5,7 +5,18 @@
 </head>
 <body>
 <h1>Hello World!</h1>
-<p>This is {{html_var}} coming through</p>
+<p>This is coming through</p>
+{% if bool_item %}
 <p>Random Number is : {{num}}</p>
+{% endif %}
+<p>
+    {%for some_item in some_list %}
+        {% if some_item|divisibleby:"2" %}
+            Even Number
+        {% endif %}
+        {{ some_item }}<br>
+    {% endfor %}
+</p>
 </body>
 </html>
+1:10
